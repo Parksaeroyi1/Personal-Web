@@ -1,0 +1,371 @@
+/* Global styles */
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added for better layout control */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+section {
+    scroll-margin-top: 150px; 
+  }
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 2rem 2rem 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000; 
+    font-size: larger;
+    background: black; 
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+
+.header_home {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.header_nav a {
+    color: grey;
+    text-decoration: none;
+    display: inline;
+    padding: 0 20px;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+}
+
+.nav_links li {
+    margin: 0 20px;
+}
+
+.nav_links a {
+    color: grey;
+    text-decoration: none;
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 34px;
+    margin-left: auto;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    margin-bottom: 6px;
+}
+
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20rem;
+    padding-bottom: 30rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    width: 100%;
+    Height: calc(100vh - 40px);
+    border-bottom: 1px solid white;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 span {
+    color: red;
+}
+
+/* About Me and Projects sections */
+.about_me, .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 15rem;
+    border-bottom: 1px solid white;
+}
+
+.about_heading, .projects_heading {
+    color: grey;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.about_me_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.profile_image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-right: 2rem;
+    border-radius: 20px;
+    border: 2px solid grey;
+}
+
+.text_about {
+    font-size: large;
+    color: white;
+    max-width: 700px;
+    text-align: left;
+    margin-left: 0;
+    line-height: 2;
+}
+
+.projects_list {
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+
+
+.image_container {
+    position: relative;
+    display: inlblock;
+}
+
+.project_image {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    transition: filter 0.3s ease-in-out;
+    border-radius: 20px;
+    border: 2px solid grey;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.image_container:hover .project_image {
+    filter: blur(5px);
+}
+
+.image_container:hover .overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.footer {
+    background: black;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer form {
+    margin-bottom: 2rem;
+}
+
+.footer textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+}
+
+.footer input[type="submit"] {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: grey;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
+
+.show {
+    display: block !important;
+}
+
+
+@media (max-width: 960px) {
+
+    main {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 20px;
+    }
+
+    .header_home {
+        display: inline-block;
+    }
+    header {
+        display: block;
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 94%;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+
+
+    .header_nav {
+        display: none;
+    }
+
+    .header_nav a {
+       width: 100%;
+       display: block;
+       padding-left: 0;
+       padding-right: 0;
+    }
+
+    .hamburger {
+        display: inline-block;
+        float: right;
+    }
+
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -10px;
+    }
+
+    .hamburger.active + .nav_links {
+        display: flex;
+    }
+
+    .about_me, .projects { 
+        padding-bottom: 0;
+    }
+
+    .hero {
+        margin: 0;
+        padding: 0 16px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .projects_list {
+        display: block;
+    }
+    .about_me {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+    .about_me_content {
+        display: block;
+    }
+    .text_about {
+        margin: 0;
+        padding: 0;
+    }
+
+    .projects {
+        margin: 0;
+        
+    }
+
+
+    .project_image {
+        height: auto;
+        max-width: 500px;
+        margin-bottom: 16px;
+    }
+}
