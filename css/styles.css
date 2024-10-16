@@ -268,6 +268,26 @@ header {
     display: block !important;
 }
 
+@media (max-width: 1920px) {
+
+
+    .profile_image {
+        height: 500px;
+        width: 100%;
+    }
+
+    .project_image {
+        height: 500px;
+        max-width: 500px;
+        margin-bottom: 16px;
+    }
+
+    .projects_list {
+        gap: 150px;
+
+    }
+
+}   
 
 @media (max-width: 960px) {
 
