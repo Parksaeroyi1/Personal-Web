@@ -280,27 +280,6 @@ header {
     display: block !important;
 }
 
-@media (max-width: 1920px) {
-
-
-    .profile_image {
-        height: 500px;
-        width: 100%;
-    }
-
-    .project_image {
-        height: 500px;
-        max-width: 500px;
-        margin-bottom: 16px;
-    }
-
-    .projects_list {
-        gap: 150px;
-
-    }
-
-}   
-
 
 @media (max-width: 1920px) {
 
@@ -417,9 +396,10 @@ header {
     }
 
 
-    .project_image {
+    .project_image, .random_image {
         height: auto;
         max-width: 500px;
+        width: 100%; /* Ensures it scales within the container */
         margin-bottom: 16px;
     }
 }
