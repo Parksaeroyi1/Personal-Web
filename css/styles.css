@@ -137,6 +137,7 @@ header {
 
 button {
     display: flex;
+    background-color: black;
     background-color: white;
     font-family: 'Inter', sans-serif;
     margin-bottom: 300px;
