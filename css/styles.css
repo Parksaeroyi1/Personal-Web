@@ -173,6 +173,11 @@ button {
     line-height: 2;
 }
 
+.random_project {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .random_image {
     width: 100%;
     max-width: 400px;
