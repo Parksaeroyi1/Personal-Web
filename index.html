@@ -45,7 +45,7 @@
             <h3 class="about_heading">About me</h3>
             <div class="about_me_content">
                 <img src="images/me.jpg" alt="me" class="profile_image">
-                <div class="button"><button onclick="myProfile()">About Me</button></div>
+                <div class="button"><button onclick="myProfile()">Click for more info</button></div>
                 <div class="text_about">
                     <p></p>
                 </div>
@@ -81,10 +81,10 @@
                     </a>
                 </li>
                 <li class="project">
-                    <a href="index.html" class="project_link" target="_blank">
+                    <a href="rock-paper-scissor/rps.html" class="project_link" target="_blank">
                         <div class="image_container">
-                            <img src="images/es.png" alt="Project 3 Image" class="project_image">
-                            <div class="overlay">PERSONAL WEB!</div>
+                            <img src="images/rockpap.jpg" alt="Project 3 Image" class="project_image">
+                            <div class="overlay">ROCK PAPER SCISSORS!</div>
                         </div>
                     </a>
                 </li>
@@ -101,6 +101,20 @@
     <!-- Footer Section -->
     <footer class="footer" id="footer">
         <h4>Contact Me</h4>
+
+        <div id="overlay" onclick="toggle_visibility()" style="display: none;"></div>
+        <div id="feedback-main" style="display: none;">
+        <button class="close-btn" onclick="toggle_visibility()">×</button>
+        <p>Did you like my website?</p>
+        <!-- Thumbs Up and Thumbs Down Buttons -->
+        <div class="feedback-buttons-container">
+            <button class="thumbs-btn thumbs-up" onclick="handleThumbsUp()">👍</button>
+            <button class="thumbs-btn thumbs-down" onclick="handleThumbsDown()">👎</button>
+        </div>
+        </div>
+    
+    <button class="feedback-button" onclick="toggle_visibility()">Feedback</button>
+
         <form action="mailto:elijahsuyatt@gmail.com" method="post" enctype="text/plain">
             <textarea name="message" rows="4" cols="50" placeholder="Write your message here"></textarea><br>
             <input type="submit" value="Send" onclick="emailSent">

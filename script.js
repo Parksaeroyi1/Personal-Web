@@ -1,5 +1,5 @@
 // Array of image paths
-const images = ['images/russell.jpg', 'images/homers.png', 'images/es.png'];
+const images = ['images/russell.jpg', 'images/homers.png', 'images/rockpap.jpg'];
 
 // Selects a random image from the array
 const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -33,9 +33,11 @@ const displayAbout = () => {
 };
 
 // Calls the displayAbout function to update the profile information
+
 displayAbout();
 
 // Function to toggle the visibility of the "text_about" section
+
 const myProfile = () => {
     let x = document.getElementsByClassName("text_about");
     if (x.length > 0) {
@@ -48,10 +50,12 @@ const myProfile = () => {
 };
 
 // Queries the hamburger menu element and the navigation links container
+
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.header_nav');
 
 // Adds a click event listener to the hamburger menu to toggle the 'show' class on the navigation links
+
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
@@ -68,3 +72,35 @@ projectLinks.forEach(link => {
         window.location = link.href;
     })
 })
+
+// Feedback //
+
+// Toggle visibility of feedback modal
+const toggle_visibility = () => {
+    const feedback = document.getElementById('feedback-main');
+    const overlay = document.getElementById('overlay');
+
+    if (feedback && overlay) {
+        if (feedback.style.display === 'block') {
+            feedback.style.display = 'none';
+            overlay.style.display = 'none';
+        } else {
+            feedback.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+    } else {
+        console.error('Element not found');
+    }
+}
+
+// Handle Thumbs Up click
+const handleThumbsUp = () => {
+    alert("Thank you for your positive feedback!");
+    toggle_visibility();  // Hide feedback after voting
+}
+
+// Handle Thumbs Down click
+const handleThumbsDown = () => {
+    alert("Sorry to hear that. We'll try to improve!");
+    toggle_visibility();  // Hide feedback after voting
+}
